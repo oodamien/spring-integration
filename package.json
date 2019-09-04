@@ -1,0 +1,39 @@
+{
+  "name": "spring-website",
+  "version": "2.0.0.beta",
+  "main": "src/index.html",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "parcel src/pages/**.html",
+    "build": "parcel build src/pages/**.html"
+  },
+  "devDependencies": {
+    "@parcel/fs": "^1.11.0",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^5.2.1",
+    "cssnano": "^4.1.10",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-parser-babylon": "^6.0.0",
+    "import-sort-style-renke": "^6.0.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-eslint": "^1.0.7",
+    "parcel-plugin-nuke-dist": "^1.0.0",
+    "parcel-plugin-static-files-copy": "^2.2.1",
+    "prettier": "^1.16.4",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "importSort": {
+    ".js": {
+      "parser": "babylon",
+      "style": "renke"
+    }
+  },
+  "on-save": {
+    "**/*.js": "cross-env NODE_ENV=test import-sort --write",
+    "**/*.{{c,le,sc}ss,g?(raph)ql,htm?(l),js?(on|on5|onl|x|s),md?(x|wn),m?(ark)down,mkdn,ts?(x),vue,y?(a)ml}": [
+      "prettier --write"
+    ]
+  }
+}
