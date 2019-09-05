@@ -22,6 +22,7 @@
     "parcel-plugin-nuke-dist": "^1.0.0",
     "parcel-plugin-static-files-copy": "^2.2.1",
     "prettier": "^1.16.4",
+    "reflex-grid": "^2.0.4",
     "sass": "^1.23.0-module.beta.1"
   },
   "importSort": {
