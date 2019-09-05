@@ -81,7 +81,29 @@ a {
 
 .promo {
   background: $spring-color-light;
-  height: 400px;
+  height: 480px;
+  display: flex;
+
+  align-items: center;
+  article {
+    text-align: center;
+    h1 {
+      line-height: 60px;
+      margin: 0;
+      font-size: 54px;
+      padding-bottom: $spring-8point;
+    }
+    h2 {
+      margin: 0;
+      padding: $spring-8point * 2 0;
+      font-size: 24px;
+      font-weight: normal;
+    }
+    .button {
+      padding-left: $spring-8point * 6;
+      padding-right: $spring-8point * 6;
+    }
+  }
 }
 
 .promo-links {
@@ -178,12 +200,28 @@ a {
 
 .quotes {
   padding-bottom: $spring-8point * 8;
+  padding-top: $spring-8point * 8;
   .quote {
-    max-width: 600px;
+    max-width: 750px;
     text-align: center;
     margin: 0 auto;
-    font-size: 22px;
+    font-size: 26px;
     line-height: $spring-8point * 5;
+    position: relative;
+    padding-top: 5px;
+    p {
+      padding-bottom: $spring-8point;
+    }
+    .q {
+      font-size: 140px;
+      position: absolute;
+      left: 50%;
+      width: 100px;
+      top: 0;
+      margin-left: -50px;
+      text-align: center;
+      color: $spring-color-primary;
+    }
   }
 }
 
@@ -195,7 +233,77 @@ ul.list-styled {
   list-style: none;
   li {
     margin: $spring-8point * 5 0;
-    border-left: 2px solid $spring-color-primary;
+    border-left: 3px solid $spring-color-primary;
     padding-left: $spring-8point * 2;
+  }
+}
+
+// Code Highlight
+.code-highlight {
+  padding: $spring-8point * 2;
+  padding-bottom: $spring-8point * 5;
+  .container {
+  }
+  .col-4 {
+    display: flex;
+    align-items: center;
+  }
+  .code-highlight-desc {
+    padding-right: 30px;
+  }
+}
+
+// Console
+
+.console {
+  $size-button: 8px;
+  background: black;
+  color: white;
+  margin-right: $spring-8point * 4;
+  border-radius: $spring-8point;
+  padding: $spring-8point * 4 $spring-8point * 8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  .console-button-1,
+  .console-button-2,
+  .console-button-3 {
+    position: absolute;
+    top: 16px;
+    left: 10px + $size-button;
+    height: $size-button;
+    width: $size-button;
+    border-radius: $size-button / 2;
+    background: #ee665a;
+  }
+  .console-button-2 {
+    left: 10px + ($size-button * 3);
+    background: #e1c04c;
+  }
+  .console-button-3 {
+    left: 10px + ($size-button * 5);
+    background: #70be47;
+  }
+}
+
+// Button
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $spring-color-primary;
+  border: 1px solid $spring-color-primary;
+  padding: $spring-8point $spring-8point * 2;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    background: darken($spring-color-primary, 4);
+    border-color: darken($spring-color-primary, 4);
   }
 }

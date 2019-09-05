@@ -181,9 +181,11 @@
         <!-- Promo -->
         <section class="promo">
           <div class="container">
-            Open Source for open minds. Java made simple
-            <a>Begin</a>
-            <a>Docs</a>
+            <article>
+              <h1>Open source for<br />open minds.</h1>
+              <h2>Java™ made simple.</h2>
+              <p><a class="button">Begin</a> <a class="button">Docs</a></p>
+            </article>
           </div>
         </section>
 
@@ -291,9 +293,50 @@
           </div>
         </section>
 
+        <section class="code-highlight">
+          <div class="container">
+            <div class="grid">
+              <div class="col-8">
+                <div class="console">
+                  <span class="console-button-1"></span>
+                  <span class="console-button-2"></span>
+                  <span class="console-button-3"></span>
+                  <pre><code>package hello;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+public class HelloController {
+
+    @RequestMapping("/")
+    public String index() {
+        return "Greetings from Spring Boot!";
+    }
+
+}</code></pre>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="code-highlight-desc">
+                  <article>
+                    <h1>Spring Boot 2.X</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="quotes">
           <div class="container">
             <div class="quote">
+              <span class="q">“</span>
               <p>
                 <q>
                   The evolution of Spring and its features align very well with
